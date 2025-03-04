@@ -1,0 +1,159 @@
+/* styles.css */
+/* Reset some default browser styles */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    flex: 1;
+}
+
+body {
+    background-color: #0d1b2a; /* Dark blue background */
+    color: #e0e1dd; /* Light grey text */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #1b263b; /* Darker blue background */
+    color: #e0e1dd; /* Light grey text */
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    background-color: #415a77; /* Medium blue background */
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #e0e1dd; /* Light grey text */
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+.main {
+    padding: 20px;
+}
+
+.footer {
+    background-color: #1b263b; /* Darker blue background */
+    color: #e0e1dd; /* Light grey text */
+    padding: 10px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.skill, .project {
+    background-color: #1b263b; /* Darker blue background */
+    border: 2px solid #415a77; /* Medium blue border */
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    width: 200px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #e0e1dd; /* Light grey text */
+}
+
+.skill:hover, .project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-list {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.project-list .project {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.bio {
+    max-width: 600px;
+}
+
+.contact-info {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    font-size: 1.5em; /* Increase icon size */
+}
+
+.contact-info a {
+    color: #e0e1dd;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
