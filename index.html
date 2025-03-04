@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-/    <title>Arifin's Profile</title>
+    <title>Arifin Putih</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -53,6 +53,11 @@
                         <p>Description of project 3.</p>
                     </div>
                 </div>
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
         </div>
         <div class="section">
@@ -79,6 +84,11 @@
                         <p>Description of project 3.</p>
                     </div>
                 </div>
+                <div class="dots">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
             </div>
         </div>
         <div class="section" id="profile">
@@ -100,7 +110,7 @@
             </div>
         </div>
         <footer class="footer">
-            <p>&copy; 2023 My Portfolio. All rights reserved.</p>
+            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
         </footer>
     </div>
     <script>
@@ -112,6 +122,24 @@
                 item.classList.remove('hover');
             });
         });
+
+        document.querySelectorAll('.project').forEach((item, index) => {
+            item.addEventListener('click', () => {
+                document.querySelectorAll('.project').forEach(proj => {
+                    proj.classList.remove('active');
+                });
+                item.classList.add('active');
+                updateDots(index);
+            });
+        });
+
+        function updateDots(activeIndex) {
+            document.querySelectorAll('.dots').forEach(dotContainer => {
+                dotContainer.querySelectorAll('.dot').forEach((dot, index) => {
+                    dot.classList.toggle('active', index === activeIndex);
+                });
+            });
+        }
     </script>
 </body>
 </html>
