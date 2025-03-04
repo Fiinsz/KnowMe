@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Arifin's Profile</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="header">
-        <h1>My Portfolio</h1>
-    </div>
     <nav class="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#profile">Profile</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <img src="path/to/your/logo.png" alt="Logo" class="logo">
+                <a href="#home" class="title-logo">Arifin Putih</a>
+            </div>
+            <ul class="navbar-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </nav>
     <div class="container">
+        <div class="section" id="greetings">
+            <h2 class="greeting-text">Let's have your work done</h2>
+            <h2 class="greeting-text">Visualize your imagination</h2>
+        </div>
         <div class="section" id="skills">
             <h2>3D Skills</h2>
             <div class="skills">
@@ -94,5 +102,15 @@
             <p>&copy; 2023 My Portfolio. All rights reserved.</p>
         </footer>
     </div>
+    <script>
+        document.querySelectorAll('.skill, .project').forEach(item => {
+            item.addEventListener('mouseover', () => {
+                item.classList.add('hover');
+            });
+            item.addEventListener('mouseout', () => {
+                item.classList.remove('hover');
+            });
+        });
+    </script>
 </body>
 </html>

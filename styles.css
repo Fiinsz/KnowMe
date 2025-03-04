@@ -21,7 +21,7 @@ html, body {
 body {
     background-color: #0d1b2a; /* Dark blue background */
     color: #e0e1dd; /* Light grey text */
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -31,33 +31,62 @@ body {
     color: #e0e1dd; /* Light grey text */
     padding: 20px;
     text-align: center;
+    font-family: 'Poppins', cursive;
 }
 
 .navbar {
-    background-color: #415a77; /* Medium blue background */
-    padding: 10px;
-    text-align: center;
+    background-color: #1b263b; /* Darker blue background */
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar ul {
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar-logo .title-logo {
+    color: #e0e1dd;
+    font-size: 1.5em;
+    text-decoration: none;
+    font-family: 'Poppins', cursive;
+}
+
+.navbar-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
 }
 
-.navbar ul li {
+.navbar-menu li {
     margin: 0 15px;
 }
 
-.navbar a {
+.navbar-menu a {
     color: #e0e1dd; /* Light grey text */
     text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    transition: color 0.3s;
 }
 
-.navbar a:hover {
-    text-decoration: underline;
+.navbar-menu a:hover {
+    color: #03a9f4; /* Bright blue text */
 }
 
 .main {
@@ -146,7 +175,7 @@ body {
 
 .contact-info i {
     margin-right: 10px;
-    font-size: 1.5em; /* Increase icon size */
+    font-size: 2em; /* Increase icon size */
 }
 
 .contact-info a {
@@ -156,4 +185,27 @@ body {
 
 .contact-info a:hover {
     text-decoration: underline;
+}
+
+.hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.greeting-text {
+    font-family: 'Poppins', cursive;
+    font-size: 2em;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
