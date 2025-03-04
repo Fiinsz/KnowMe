@@ -7,16 +7,17 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="web.svg" type="image/svg+xml">
 </head>
 <body>
     <nav class="navbar">
         <div class="navbar-container">
             <div class="navbar-logo">
-                <img src="path/to/your/logo.png" alt="Logo" class="logo">
-                <a href="#home" class="title-logo">Arifin Putih</a>
+                <img src="Weblogo.png" alt="Logo" class="logo">
+                <a href="#" class="title-logo">My Website</a>
             </div>
             <ul class="navbar-menu">
-                <li><a href="#home">Home</a></li>
+                <li><a href="#">Home</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#profile">Profile</a></li>
                 <li><a href="#contact">Contact</a></li>
