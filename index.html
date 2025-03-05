@@ -130,6 +130,7 @@
                 });
                 item.classList.add('active');
                 updateDots(index);
+                scrollToCenter(item);
             });
         });
 
@@ -138,6 +139,17 @@
                 dotContainer.querySelectorAll('.dot').forEach((dot, index) => {
                     dot.classList.toggle('active', index === activeIndex);
                 });
+            });
+        }
+
+        function scrollToCenter(element) {
+            const container = element.parentElement;
+            const containerWidth = container.offsetWidth;
+            const elementWidth = element.offsetWidth;
+            const scrollPosition = element.offsetLeft - (containerWidth / 2) + (elementWidth / 2);
+            container.scrollTo({
+                left: scrollPosition,
+                behavior: 'smooth'
             });
         }
     </script>
