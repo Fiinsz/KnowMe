@@ -1,9 +1,12 @@
 // script.js
 document.addEventListener('DOMContentLoaded', function(){
-  // Smooth scroll for anchor links
+  // Smooth scroll for anchor links (skip href="#")
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor){
     anchor.addEventListener('click', function(e){
-      const target = document.querySelector(this.getAttribute('href'));
+      const href = this.getAttribute('href');
+      if(!href || href === '#') return; // ignore empty or top anchors
+      let target = null;
+      try{ target = document.querySelector(href); }catch(err){ target = null; }
       if(target){
         e.preventDefault();
         target.scrollIntoView({behavior:'smooth',block:'start'});
