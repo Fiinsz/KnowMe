@@ -76,3 +76,48 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   }
 });
+
+  // Loader and scroll reveal animations
+  (function(){
+    const loader = document.getElementById('siteLoader');
+    const sidebar = document.querySelector('.sidebar');
+    const main = document.querySelector('.main');
+
+    function showContent(){
+      if(sidebar) sidebar.classList.add('visible');
+      if(main) main.classList.add('visible');
+    }
+
+    function hideLoader(){
+      if(loader){
+        loader.setAttribute('aria-hidden','true');
+        setTimeout(()=> loader.remove(),600);
+      }
+    }
+
+    // Hide loader after page load or max 2s fallback
+    window.addEventListener('load', function(){
+      showContent();
+      setTimeout(hideLoader, 400);
+    });
+    // fallback in case load doesn't fire quickly (images cached etc.)
+    setTimeout(function(){ showContent(); hideLoader(); }, 2000);
+
+    // IntersectionObserver for reveal animations
+    const reveals = document.querySelectorAll('.reveal');
+    if(reveals && reveals.length){
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(entry => {
+          if(entry.isIntersecting){
+            entry.target.classList.add('show');
+            entry.target.classList.remove('hidden');
+          }else{
+            // If you want them to hide again when leaving viewport
+            entry.target.classList.remove('show');
+            entry.target.classList.add('hidden');
+          }
+        });
+      },{threshold:0.18});
+      reveals.forEach(r=> obs.observe(r));
+    }
+  })();
