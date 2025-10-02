@@ -92,6 +92,7 @@ h2{font-size:28px;margin:8px 0;color:#222}
     align-items:center;
     gap:12px;
     box-shadow:0 12px 30px rgba(10,12,20,0.04);
+    height:auto; /* allow auto height on mobile so footer isn't pushed out */
   }
   /* more visible avatar on mobile card */
   .avatar{width:96px;height:96px;border-width:5px}
@@ -101,8 +102,19 @@ h2{font-size:28px;margin:8px 0;color:#222}
   .nav a.active{background:linear-gradient(180deg, rgba(75,79,240,0.12), rgba(75,79,240,0.06));color:var(--accent)}
   /* keep language label small and centered */
   .langs{font-size:12px;margin-top:6px}
-  /* hide the large footer contact block to keep header tidy; contact remains via modal */
-  .sidebar-footer{display:none}
+  /* show a compact footer contact row on mobile */
+  .sidebar-footer{
+    display:flex;
+    flex-direction:row;
+    gap:12px;
+    justify-content:center;
+    width:100%;
+    padding-top:12px;
+    border-top:1px solid rgba(0,0,0,0.03);
+    margin-top:0; /* ensure footer sits directly after nav */
+  }
+  .sidebar-footer a{font-size:13px;color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:999px;background:linear-gradient(180deg, rgba(75,79,240,0.06), rgba(255,255,255,0.02))}
+  .sidebar-footer a:hover{color:var(--accent);background:linear-gradient(90deg, rgba(75,79,240,0.12), rgba(75,79,240,0.04))}
   /* main content should flow directly under the card */
   .main{padding:18px;padding-top:34px}
   h1{font-size:28px}
