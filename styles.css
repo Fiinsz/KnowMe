@@ -55,20 +55,33 @@ h2{font-size:28px;margin:8px 0;color:#222}
 .project-card{background:white;border-radius:10px;padding:18px;box-shadow:0 6px 14px rgba(20,30,60,0.04);text-align:center}
 
 @media (max-width:900px){
-  /* Convert left sidebar into a fixed top bar */
+  /* Make sidebar a rounded card and stack nav vertically for mobile */
   .app{flex-direction:column}
   .sidebar{
-    position:fixed;top:0;left:0;right:0;width:100%;height:auto;margin:0;border-radius:0;padding:12px 18px;display:flex;flex-direction:row;align-items:center;justify-content:space-between;z-index:1100;box-shadow:0 6px 18px rgba(10,12,20,0.06)
+    position:relative;
+    top:auto;left:auto;right:auto;
+    width:calc(100% - 24px);
+    margin:12px;
+    border-radius:12px;
+    padding:18px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    box-shadow:0 12px 30px rgba(10,12,20,0.04);
   }
-  /* smaller avatar in the top bar */
-  .avatar{width:56px;height:56px;border-width:3px}
-  /* nav becomes horizontal */
-  .nav ul{display:flex;gap:8px;align-items:center}
-  .nav a{padding:8px 10px;font-size:15px}
-  /* hide the footer links in the compact header */
+  /* more visible avatar on mobile card */
+  .avatar{width:96px;height:96px;border-width:5px}
+  /* nav vertical and centered */
+  .nav ul{display:block;width:100%;text-align:center}
+  .nav a{display:block;padding:10px 8px;margin:6px auto;font-size:17px;border-radius:10px;width:160px}
+  .nav a.active{background:linear-gradient(180deg, rgba(75,79,240,0.12), rgba(75,79,240,0.06));color:var(--accent)}
+  /* keep language label small and centered */
+  .langs{font-size:12px;margin-top:6px}
+  /* hide the large footer contact block to keep header tidy; contact remains via modal */
   .sidebar-footer{display:none}
-  /* ensure main content sits below the fixed top bar */
-  .main{padding:18px;padding-top:120px}
+  /* main content should flow directly under the card */
+  .main{padding:18px;padding-top:34px}
   h1{font-size:28px}
   /* stack hero content and reduce spacing on mobile */
   .hero{flex-direction:column;align-items:flex-start;padding:20px;gap:18px}
