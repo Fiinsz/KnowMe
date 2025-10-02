@@ -1,157 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Know me</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="web.svg" type="image/svg+xml">
-</head>
-<body>
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="navbar-logo">
-                <img src="Weblogo.png" alt="Logo" class="logo">
-                <a href="#" class="title-logo">Arifin's Profile</a>
-            </div>
-            <ul class="navbar-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#profile">Profile</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="section" id="greetings">
-            <h2 class="greeting-text">Let's have your work done</h2>
-            <h2 class="greeting-text">Visualize your imagination</h2>
-        </div>
-        <div class="section" id="skills">
-            <h2>3D Skills</h2>
-            <div class="skills">
-                <div class="skill">
-                    <h3>3D Modeling</h3>
-                    <p>Description of 3D modeling skill.</p>
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiinsz — Portfolio</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="app">
+            <aside class="sidebar">
+                <div class="avatar-wrap">
+                    <img src="Arifin.jpg" alt="Fiinsz" class="avatar">
                 </div>
-            </div>
-            <div class="projects">
-                <h3>Projects</h3>
-                <div class="project-list">
-                    <div class="project">
-                        <h3>Project 1</h3>
-                        <p>Description of project 1.</p>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#home" class="active">Home</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#about">About Me</a></li>
+            <li><a href="#skills">Skills</a></li>
+                    </ul>
+                </nav>
+                <div class="langs">EN / ID</div>
+                <div class="socials"></div>
+                <div class="sidebar-footer">
+                    <a href="https://www.instagram.com/fiinsz/" target="_blank">Instagram</a>
+                    <a href="https://github.com/Fiinsz" target="_blank">GitHub</a>
+                    <a href="mailto:stdyfiinsz@gmail.com">Email</a>
+                    <a href="https://wa.me/6285157732792" target="_blank">WhatsApp (Pin)</a>
+                </div>
+            </aside>
+            <main class="main">
+                <section id="home" class="hero">
+                    <div class="hero-left">
+                    <div class="label">01</div>
+                    <h1>&lt;Hello, I'm <span class="accent">Fiinsz</span&gt;!</h1>
+            <h2>&lt; I design, develop, and create 3D &gt;</h2>
+                        <p class="lead">21 years old — Developer & 3D artist. I build modern websites and 3D visuals.</p>
+                        <div class="cta-row">
+                            <a href="#" id="workBtn" class="btn btn-primary">Work with me</a>
+                            <a href="#projects" class="btn btn-outline">See projects</a>
+                        </div>
                     </div>
-                    <div class="project">
-                        <h3>Project 2</h3>
-                        <p>Description of project 2.</p>
+                    <div class="hero-right">
+                        <div class="card">
+                            <h3>Tools I use</h3>
+                            <ul>
+                                <li>Davinci Resolve</li>
+                                <li>Blender</li>
+                                <li>Affinity Designer</li>
+                                <li>Adobe Substance 3D Painter</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="project">
-                        <h3>Project 3</h3>
-                        <p>Description of project 3.</p>
+                </section>
+                <section id="projects" class="section projects">
+                    <h3>Selected Projects</h3>
+                    <div class="projects-grid">
+            <!-- simple placeholders -->
+            <article class="project-card">Project A</article>
+            <article class="project-card">Project B</article>
+                        <article class="project-card">Project C</article>
                     </div>
-                </div>
-                <div class="dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
+                </section>
+                <section id="about" class="section about">
+                    <h3>About Me</h3>
+                    <p>I'm 21 years old with experience in web development and 3D creation. I craft interfaces and visuals with attention to detail.</p>
+                </section>
+                <section id="skills" class="section skills">
+                    <h3>Skills</h3>
+                    <ul>
+                        <li>Frontend development (HTML, CSS, JS)</li>
+                        <li>3D modeling & texturing (Blender, Substance)</li>
+                        <li>Video editing and color grading (Davinci)</li>
+                        <li>Graphic design (Affinity Designer)</li>
+                    </ul>
+                </section>
+                <!-- Contact moved to sidebar footer -->
+            </main>
         </div>
-        <div class="section">
-            <h2>Programming Skills</h2>
-            <div class="skills">
-                <div class="skill">
-                    <h3>Programming</h3>
-                    <p>Description of programming skill.</p>
-                </div>
-            </div>
-            <div class="projects">
-                <h3>Projects</h3>
-                <div class="project-list">
-                    <div class="project">
-                        <h3>Project 1</h3>
-                        <p>Description of project 1.</p>
-                    </div>
-                    <div class="project">
-                        <h3>Project 2</h3>
-                        <p>Description of project 2.</p>
-                    </div>
-                    <div class="project">
-                        <h3>Project 3</h3>
-                        <p>Description of project 3.</p>
-                    </div>
-                </div>
-                <div class="dots">
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                    <span class="dot"></span>
-                </div>
-            </div>
-        </div>
-        <div class="section" id="profile">
-            <h2>Profile</h2>
-            <div class="profile-info">
-                <img src="Arifin.jpg" alt="Profile Picture" class="profile-picture">
-                <div class="bio">
-                    <p>Hi, I'm Arifin, a passionate web developer with expertise in 3D modeling and programming. I love creating interactive and visually appealing web applications. In my free time, I enjoy exploring new technologies and working on personal projects.</p>
-                </div>
-            </div>
-        </div>
-        <div class="section" id="contact">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <p><a href="https://wa.me/6285157732792" target="_blank"><i class="fas fa-phone"></i> WhatsApp: 6285157732792</a></p>
-                <p><a href="mailto:stdyfiinsz@gmail.com"><i class="fas fa-envelope"></i> Email: stdyfiinsz@gmail.com</a></p>
-                <p><a href="https://www.instagram.com/fiinsz/" target="_blank"><i class="fab fa-instagram"></i> Instagram: @fiinsz</a></p>
-                <p><a href="https://github.com/Fiinsz" target="_blank"><i class="fab fa-github"></i> GitHub: Fiinsz</a></p>
-            </div>
-        </div>
-        <footer class="footer">
-            <p>&copy; 2025 My Portfolio. All rights reserved.</p>
-        </footer>
-    </div>
-    <script>
-        document.querySelectorAll('.skill, .project').forEach(item => {
-            item.addEventListener('mouseover', () => {
-                item.classList.add('hover');
-            });
-            item.addEventListener('mouseout', () => {
-                item.classList.remove('hover');
-            });
-        });
+        <!-- Contact modal -->
+        <div id="contactModal" class="modal" aria-hidden="true">
+            <div class="modal-panel">
+                <button class="modal-close" aria-label="Close">←</button>
+                <h3>Contact</h3>
 
-        document.querySelectorAll('.project').forEach((item, index) => {
-            item.addEventListener('click', () => {
-                document.querySelectorAll('.project').forEach(proj => {
-                    proj.classList.remove('active');
-                });
-                item.classList.add('active');
-                updateDots(index);
-                scrollToCenter(item);
-            });
-        });
+                <div class="contact-actions">
+                    <a class="contact-btn" href="mailto:stdyfiinsz@gmail.com">MAIL</a>
+                    <a class="contact-btn" href="https://www.instagram.com/fiinsz/" target="_blank">IG</a>
+                    <a class="contact-btn" href="https://wa.me/6285157732792" target="_blank">WA</a>
+                </div>
 
-        function updateDots(activeIndex) {
-            document.querySelectorAll('.dots').forEach(dotContainer => {
-                dotContainer.querySelectorAll('.dot').forEach((dot, index) => {
-                    dot.classList.toggle('active', index === activeIndex);
-                });
-            });
-        }
+                <hr>
 
-        function scrollToCenter(element) {
-            const container = element.parentElement;
-            const containerWidth = container.offsetWidth;
-            const elementWidth = element.offsetWidth;
-            const scrollPosition = element.offsetLeft - (containerWidth / 2) + (elementWidth / 2);
-            container.scrollTo({
-                left: scrollPosition,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-</body>
-</html>
+                <form id="contactForm">
+                    <input type="email" name="email" placeholder="Your email" required>
+                    <input type="text" name="name" placeholder="Your full name" required>
+                    <textarea name="message" placeholder="How can I help you?" rows="6" required></textarea>
+                    <div class="modal-actions">
+                        <button type="submit" class="btn btn-primary">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
+ </html>
