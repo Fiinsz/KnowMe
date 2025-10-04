@@ -77,28 +77,32 @@ h2{font-size:28px;margin:8px 0;color:#222}
 .project-link:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(20,30,60,0.06)}
 .project-link{transition:transform .18s ease,box-shadow .18s ease}
 
-@media (max-width:900px){
-  /* Make sidebar a rounded card and stack nav vertically for mobile */
+@media (max-width:1100px){
+  /* Make sidebar a rounded card with horizontal nav for mobile */
   .app{flex-direction:column}
   .sidebar{
     position:relative;
     top:auto;left:auto;right:auto;
     width:calc(100% - 24px);
+    min-width:140px; /* ensure sidebar never shrinks smaller than avatar + padding */
     margin:12px;
     border-radius:12px;
-    padding:18px;
+    padding:16px;
     display:flex;
     flex-direction:column;
     align-items:center;
-    gap:12px;
+    gap:10px;
     box-shadow:0 12px 30px rgba(10,12,20,0.04);
-    height:auto; /* allow auto height on mobile so footer isn't pushed out */
+    height:auto;
+    max-height:none;
+    overflow:visible;
   }
-  /* more visible avatar on mobile card */
-  .avatar{width:96px;height:96px;border-width:5px}
-  /* nav vertical and centered */
-  .nav ul{display:block;width:100%;text-align:center}
-  .nav a{display:block;padding:10px 8px;margin:6px auto;font-size:17px;border-radius:10px;width:160px}
+  /* avatar size for mobile */
+  .avatar{width:100px;height:100px;border-width:5px}
+  /* nav horizontal from the start on mobile */
+  .nav ul{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;width:100%;padding:0;margin:0}
+  .nav li{flex:none}
+  .nav a{display:block;padding:8px 12px;margin:0;font-size:15px;border-radius:8px;text-align:center;white-space:nowrap;width:auto}
   .nav a.active{background:linear-gradient(180deg, rgba(75,79,240,0.12), rgba(75,79,240,0.06));color:var(--accent)}
   /* keep language label small and centered */
   .langs{font-size:12px;margin-top:6px}
@@ -113,7 +117,7 @@ h2{font-size:28px;margin:8px 0;color:#222}
     border-top:1px solid rgba(0,0,0,0.03);
     margin-top:0; /* ensure footer sits directly after nav */
   }
-  .sidebar-footer a{font-size:13px;color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:999px;background:linear-gradient(180deg, rgba(75,79,240,0.06), rgba(255,255,255,0.02))}
+  .sidebar-footer a{font-size:12px;color:var(--muted);text-decoration:none;padding:6px 10px;border-radius:999px;background:linear-gradient(180deg, rgba(75,79,240,0.06), rgba(255,255,255,0.02))}
   .sidebar-footer a:hover{color:var(--accent);background:linear-gradient(90deg, rgba(75,79,240,0.12), rgba(75,79,240,0.04))}
   /* main content should flow directly under the card */
   .main{padding:18px;padding-top:34px}
@@ -170,7 +174,25 @@ h2{font-size:28px;margin:8px 0;color:#222}
 /* Fade-out when leaving viewport (optional) */
 .reveal.hidden{opacity:0;transform:translateY(-8px) scale(.98)}
 
-@media (max-width:900px){
+@media (max-width:1100px){
   .loader-bar{width:140px}
   .loader-brand{font-size:20px}
+}
+
+/* Extra small screens - make everything more compact */
+@media (max-width:400px){
+  .sidebar{
+    margin:8px;
+    padding:12px;
+    width:calc(100% - 16px);
+    min-width:100px; /* ensure sidebar never shrinks smaller than small avatar + padding */
+  }
+  .avatar{width:64px;height:64px;border-width:3px}
+  .nav ul{gap:6px}
+  .nav a{font-size:13px;padding:6px 10px}
+  .sidebar-footer{
+    gap:8px;
+    flex-wrap:wrap;
+  }
+  .sidebar-footer a{font-size:11px;padding:5px 8px}
 }
