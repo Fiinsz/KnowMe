@@ -13,6 +13,8 @@ body{
   background:linear-gradient(180deg,var(--bg),#eef3ff);
   color:#111;
 }
+/* Prevent horizontal scrolling caused by fixed-width embeds */
+html, body { overflow-x: hidden; }
 .app{display:flex;min-height:100vh}
 .sidebar{
   width:360px;padding:40px;background:var(--card);border-radius:14px;margin:28px;display:flex;flex-direction:column;align-items:center;gap:26px;box-shadow:0 8px 22px rgba(25,30,35,0.08);
@@ -68,6 +70,14 @@ h2{font-size:28px;margin:8px 0;color:#222}
 .section{margin-top:48px;padding:28px;background:var(--glass);border-radius:12px}
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:12px}
 .project-card{background:white;border-radius:10px;padding:18px;box-shadow:0 6px 14px rgba(20,30,60,0.04);text-align:center}
+/* Clip inner content to rounded corners and avoid overflow */
+.project-card{overflow:hidden}
+/* Ensure media inside project cards never overflow horizontally */
+.project-card iframe,
+.project-card img,
+.project-card video{width:100% !important;max-width:100%;display:block}
+/* Pinterest widget can inject fixed widths; constrain it explicitly */
+.project-card iframe[src*="pinterest.com"]{width:100% !important;max-width:100% !important}
 /* clickable project card */
 .project-link{display:block;text-decoration:none;color:inherit;padding:0}
 .project-link .project-thumb{height:140px;border-radius:8px;background:linear-gradient(135deg,#e9efff,#dfe9ff);display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent);font-size:22px;margin-bottom:12px}
@@ -126,6 +136,8 @@ h2{font-size:28px;margin:8px 0;color:#222}
   .hero{flex-direction:column;align-items:flex-start;padding:20px;gap:18px}
   /* projects grid to single column on narrow screens */
   .projects-grid{grid-template-columns:1fr}
+  /* Slightly reduce card padding on mobile */
+  .project-card{padding:14px}
   /* modal panel full width on small devices */
   .modal-panel{max-width:520px;padding:18px}
 }
