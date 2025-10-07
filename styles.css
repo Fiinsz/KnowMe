@@ -142,6 +142,17 @@ h2{font-size:28px;margin:8px 0;color:#222}
   .modal-panel{max-width:520px;padding:18px}
 }
 
+/* Compact Selected Projects further on small phones */
+@media (max-width: 600px){
+  /* reduce section padding for tighter look */
+  .section{padding:16px}
+  /* center cards and limit their width for nicer gutters */
+  .projects-grid{justify-items:center}
+  .project-card{width:100%;max-width:345px;padding:12px}
+  /* make iframes adapt height to width for mobile */
+  .project-card iframe{aspect-ratio:16/9;height:auto !important;border-radius:10px}
+}
+
 /* Modal contact panel */
 .modal{position:fixed;inset:0;display:none;align-items:center;justify-content:center;background:rgba(10,12,20,0.35);z-index:1200;padding:20px}
 .modal[aria-hidden="false"]{display:flex}
