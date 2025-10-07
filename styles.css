@@ -68,8 +68,10 @@ h2{font-size:28px;margin:8px 0;color:#222}
 .card h3{margin:0 0 8px 0}
 
 .section{margin-top:48px;padding:28px;background:var(--glass);border-radius:12px}
-.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:12px}
+.projects-grid{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px}
 .project-card{background:white;border-radius:10px;padding:18px;box-shadow:0 6px 14px rgba(20,30,60,0.04);text-align:center}
+/* Flex sizing for project cards */
+.projects-grid .project-card{flex:1 1 320px}
 /* Clip inner content to rounded corners and avoid overflow */
 .project-card{overflow:hidden}
 /* Ensure media inside project cards never overflow horizontally */
@@ -134,8 +136,8 @@ h2{font-size:28px;margin:8px 0;color:#222}
   h1{font-size:28px}
   /* stack hero content and reduce spacing on mobile */
   .hero{flex-direction:column;align-items:flex-start;padding:20px;gap:18px}
-  /* projects grid to single column on narrow screens */
-  .projects-grid{grid-template-columns:1fr}
+  /* center items when space is limited */
+  .projects-grid{justify-content:center}
   /* Slightly reduce card padding on mobile */
   .project-card{padding:14px}
   /* modal panel full width on small devices */
@@ -147,7 +149,7 @@ h2{font-size:28px;margin:8px 0;color:#222}
   /* reduce section padding for tighter look */
   .section{padding:16px}
   /* center cards and limit their width for nicer gutters */
-  .projects-grid{justify-items:center}
+  .projects-grid{justify-content:center}
   .project-card{width:100%;max-width:345px;padding:12px}
   /* make iframes adapt height to width for mobile */
   .project-card iframe{aspect-ratio:16/9;height:auto !important;border-radius:10px}
