@@ -64,14 +64,22 @@
                 <section id="projects" class="section projects reveal">
                     <h3>Selected Projects</h3>
                     <div class="projects-grid">
-            <!-- projects: first card links to the Three.js demo -->
-            <a class="project-card project-link reveal" href="https://fiinsz.github.io/Threejs/" target="_blank" rel="noopener noreferrer" aria-label="Open Three.js demo">
-                <div class="project-thumb">Three.js</div>
+            <!-- projects: inline iframe preview of the Three.js demo -->
+            <article class="project-card reveal" aria-label="Three.js demo preview">
                 <div class="project-meta">
-                    <h4>Three.js Demo</h4>
-                    <p>Interactive 3D demo built with Three.js.</p>
+                    <h4>Three.js Demo — Live Preview</h4>
+                    <p>Inline preview of my interactive 3D demo. Open in a new tab if it doesn't load below.</p>
                 </div>
-            </a>
+                <iframe
+                    src="https://fiinsz.github.io/Threejs/"
+                    title="Three.js Demo by Fiinsz"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    style="width: 100%; height: 420px; border: 0; border-radius: 12px;">
+                    Your browser does not support iframes.
+                </iframe>
+                <p><a href="https://fiinsz.github.io/Threejs/" target="_blank" rel="noopener noreferrer">Open full demo in a new tab</a></p>
+            </article>
             <article class="project-card reveal">Project B</article>
             <article class="project-card reveal">Project C</article>
                     </div>
