@@ -35,6 +35,7 @@
                     <a href="https://github.com/Fiinsz" target="_blank">GitHub</a>
                     <a href="mailto:stdyfiinsz@gmail.com">Email</a>
                     <a href="https://wa.me/6285157732792" target="_blank">WhatsApp (Pin)</a>
+                    <a href="https://id.pinterest.com/Fiinsz/" target="_blank" rel="noopener noreferrer">Pinterest</a>
                 </div>
             </aside>
             <main class="main">
@@ -53,10 +54,12 @@
                         <div class="card">
                             <h3>Tools I use</h3>
                             <ul>
-                                <li>Davinci Resolve</li>
+                                <li>Visual Studio Code</li>
+                                <li>Laragon</li>
                                 <li>Blender</li>
+                                <li>DaVinci Resolve</li>
                                 <li>Affinity Designer</li>
-                                <li>Adobe Substance 3D Painter</li>
+                                <li>Adobe Substance 3D Painter</li>  
                             </ul>
                         </div>
                     </div>
@@ -68,7 +71,7 @@
             <article class="project-card reveal" aria-label="Three.js demo preview">
                 <div class="project-meta">
                     <h4>Three.js Demo — Live Preview</h4>
-                    <p>Inline preview of my interactive 3D demo. Open in a new tab if it doesn't load below.</p>
+                    <p>Inline preview of my interactive 3D demo</p>
                 </div>
                 <iframe
                     src="https://fiinsz.github.io/Threejs/"
@@ -80,7 +83,19 @@
                 </iframe>
                 <p><a href="https://fiinsz.github.io/Threejs/" target="_blank" rel="noopener noreferrer">Open full demo in a new tab</a></p>
             </article>
-            <article class="project-card reveal">Project B</article>
+            <article class="project-card reveal" aria-label="Pinterest Pin preview">
+                <div class="project-meta">
+                    <h4>Project B — Pinterest Preview</h4>
+                    <p>Embedded preview of a Pinterest pin.</p>
+                </div>
+                <a
+                    data-pin-do="embedPin"
+                    data-pin-width="large"
+                    href="https://id.pinterest.com/pin/947937421576441045/"
+                    title="View this pin on Pinterest"
+                ></a>
+                <p><a href="https://id.pinterest.com/pin/947937421576441045/" target="_blank" rel="noopener noreferrer">Open on Pinterest</a></p>
+            </article>
             <article class="project-card reveal">Project C</article>
                     </div>
                 </section>
@@ -91,10 +106,13 @@
                 <section id="skills" class="section skills reveal">
                     <h3>Skills</h3>
                     <ul>
-                        <li>Frontend development (HTML, CSS, JS)</li>
-                        <li>3D modeling & texturing (Blender, Substance)</li>
-                        <li>Video editing and color grading (Davinci)</li>
-                        <li>Graphic design (Affinity Designer)</li>
+                        <li>Front-End Development (HTML, CSS, JavaScript)</li>
+                        <li>3D Modeling & Texturing (Blender, Adobe Substance 3D Painter)</li>
+                        <li>Video Editing & Color Grading (DaVinci Resolve)</li>
+                        <li>Graphic Design (Affinity Designer)</li>
+                        <li>Mobile Development (Flutter)</li>
+                        <li>3D Websites (Three.js)</li>
+                        <li>Database Management (MySQL)</li>
                     </ul>
                 </section>
                 <!-- Contact moved to sidebar footer -->
@@ -125,5 +143,7 @@
             </div>
         </div>
         <script src="script.js"></script>
+        <!-- Pinterest embed loader: required once for pin embeds -->
+        <script async defer src="https://assets.pinterest.com/js/pinit.js"></script>
     </body>
  </html>
